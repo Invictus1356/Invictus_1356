@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Personal profile page for INVICTUS, with a moving background, anime profile logo, Cinzel-styled bio, music player, and account links."
+    />
+    <title>INVICTUS</title>
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="preload" href="background-video.mp4" as="video" type="video/mp4" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background" aria-hidden="true">
+      <video class="background-video" id="backgroundVideo" autoplay muted loop playsinline>
+        <source src="background-video.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="atmosphere" aria-hidden="true"></div>
+
+    <main class="page-shell">
+      <section class="intro glass-panel reveal">
+        <img class="profile-logo" src="logo.png" alt="INVICTUS profile logo" />
+        <h1>★彡[INVICTUS]彡★</h1>
+
+        <div class="quick-notes" aria-label="Profile highlights">
+          <span>JEE Aspirant</span>
+          <span>Anime • Manga • Manhwa</span>
+          <span>Open To Friends</span>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <article class="bio glass-panel reveal" aria-labelledby="bio-title">
+          <div class="section-heading">
+            <h2 id="bio-title">Bio</h2>
+          </div>
+
+          <div class="bio-copy">
+            <p>🌌 <strong>𝑯𝒆𝒚 𝒕𝒉𝒆𝒓𝒆, 𝑰’𝒎 𝑺𝒂𝒔𝒉𝒘𝒂𝒕 — 𝒃𝒖𝒕 𝒚𝒐𝒖 𝒄𝒂𝒏 𝒄𝒂𝒍𝒍 𝒎𝒆 𝑺𝒂𝒎.</strong> ✨</p>
+            <p><strong>𝑰’𝒎 16 𝒊𝒏 2026</strong>, a <strong>JEE aspirant</strong> chasing big dreams while trying to cherish the little moments along the way. 📚🚀</p>
+            <p>Not too long ago, I stumbled into the world of <strong>anime, manga &amp; manhwa</strong>… and oh God, what a universe I had been missing. 😭🔥<br />From unforgettable stories to characters that somehow feel <em>real</em>, I discovered a whole new kind of magic — a world of emotions, adventures, and stories I never knew I needed. 🌸📖✨</p>
+            <p>Sadly, for now, I have to step away from these <strong>peak experiences</strong> for a while and focus on the road ahead. 🛤️🎯<br />But don’t worry — I’m not disappearing completely. I’ll still drop by your accounts whenever I can. 👀💫</p>
+            <p>And hey, you’re always welcome to leave your <strong>thoughts, recommendations, or random pieces of wisdom</strong> on my accounts too! 💬<br />I might not get around to them immediately, but <strong>I promise I’ll find my way back eventually.</strong> ❤️</p>
+            <p>🤝 <strong>I genuinely love making friends, meeting interesting people, and discovering different perspectives.</strong><br />So, if you’re someone who enjoys good conversations, unforgettable stories, or simply shares the same chaotic love for fiction — feel free to follow along. 🌍✨</p>
+            <p>After all, <strong>every person we meet leaves behind a little piece of themselves</strong>, and I’m genuinely glad our paths crossed. 🌙</p>
+            <p><strong>𝑰𝒕 𝒘𝒂𝒔 𝒈𝒆𝒏𝒖𝒊𝒏𝒆𝒍𝒚 𝒍𝒐𝒗𝒆𝒍𝒚 𝒎𝒆𝒆𝒕𝒊𝒏𝒈 𝒚𝒐𝒖.</strong><br /><strong>𝑼𝒏𝒕𝒊𝒍 𝒐𝒖𝒓 𝒑𝒂𝒕𝒉𝒔 𝒄𝒓𝒐𝒔𝒔 𝒂𝒈𝒂𝒊𝒏. 🫶✨</strong></p>
+          </div>
+        </article>
+
+        <aside class="side-stack">
+          <section class="music glass-panel reveal" aria-labelledby="music-title">
+            <div class="section-heading">
+              <p class="eyebrow">Background Sound</p>
+              <h2 id="music-title">Music</h2>
+            </div>
+
+            <audio id="music" preload="auto" autoplay loop>
+              <source src="music.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+
+            <button class="play-button" id="playButton" type="button" aria-label="Play music">
+              <span class="play-symbol" id="playSymbol" aria-hidden="true">▶</span>
+              <span id="playText">Play Music</span>
+            </button>
+
+            <div class="track">
+              <div class="track-meta">
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+              </div>
+              <label class="progress-label" for="progress">Music progress</label>
+              <input id="progress" class="range progress" type="range" min="0" max="100" value="0" step="0.1" />
+            </div>
+
+            <label class="volume-control" for="volume">
+              <span>Volume</span>
+              <input id="volume" class="range" type="range" min="0" max="1" value="0.65" step="0.01" />
+            </label>
+          </section>
+
+          <section class="links glass-panel reveal" aria-labelledby="links-title">
+            <div class="section-heading">
+              <p class="eyebrow">Accounts</p>
+              <h2 id="links-title">Links</h2>
+            </div>
+
+            <p class="placeholder-note">Find me here:</p>
+
+            <button class="account-link account-button" id="discordButton" type="button" data-username="Invictus_1356" aria-label="Copy Discord username">
+              <span class="link-mark">DC</span>
+              <span>
+                <strong>Discord</strong>
+                <small id="discordText">Invictus_1356</small>
+              </span>
+            </button>
+
+            <a class="account-link" href="https://comix.to/u/mn8lym" target="_blank" rel="noopener noreferrer" aria-label="Open Comix profile">
+              <span class="link-mark">CX</span>
+              <span>
+                <strong>Comix</strong>
+                <small>https://comix.to/u/mn8lym</small>
+              </span>
+            </a>
+
+            <a class="account-link" href="https://anilist.co/user/Invictus05/" target="_blank" rel="noopener noreferrer" aria-label="Open AniList profile">
+              <span class="link-mark">AL</span>
+              <span>
+                <strong>AniList</strong>
+                <small>https://anilist.co/user/Invictus05/</small>
+              </span>
+            </a>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 INVICTUS</span>
+      <span>Built as a static personal profile page.</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
